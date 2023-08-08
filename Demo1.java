@@ -61,6 +61,50 @@ public class Demo1{
                                     double subM3=Double.parseDouble(subM3x);
                                     if(subM3<0||subM3>100) System.out.println("\u001B[31mInvalid Marks 3");
                                     else subMarks3=subM3;
+                                    avg=(subMarks1+subMarks2+subMarks3)/3;
+                                    int s1=Integer.parseInt(subName1.substring(3));
+                                    int s2=Integer.parseInt(subName2.substring(3));
+                                    int s3=Integer.parseInt(subName3.substring(3));
+
+
+                                    String status;
+                                    if(avg>=75) status="\u001B[34mDistinguished Pass\u001B[0m";
+                                    else if(avg<75&&avg>=65) status="\u001B[32mCredit Pass\u001B[0m";
+                                    else if(avg<65&&avg>=55) status="\u001B[33mPass\u001B[0m";
+                                    else status="\u001B[31mFail\u001B[0m";
+
+                                    String status1;
+                                    if(subMarks1>=75) status1="\u001B[34mDistinguished Pass\u001B[0m";
+                                    else if(subMarks1<75&&subMarks1>=65) status1="\u001B[32mCredit Pass\u001B[0m";
+                                    else if(subMarks1<65&&subMarks1>=55) status1="\u001B[33mPass\u001B[0m";
+                                    else status1="\u001B[31mFail\u001B[0m";
+
+                                    String status2;
+                                    if(subMarks2>=75) status2="\u001B[34mDistinguished Pass\u001B[0m";
+                                    else if(subMarks2<75&&subMarks2>=65) status2="\u001B[32mCredit Pass\u001B[0m";
+                                    else if(subMarks2<65&&subMarks2>=55) status2="\u001B[33mPass\u001B[0m";
+                                    else status2="\u001B[31mFail\u001B[0m";
+
+                                    String status3;
+                                    if(subMarks3>=75) status3="\u001B[34mDistinguished Pass\u001B[0m";
+                                    else if(subMarks3<75&&subMarks3>=65) status3="\u001B[32mCredit Pass\u001B[0m";
+                                    else if(subMarks3<65&&subMarks3>=55) status3="\u001B[33mPass\u001B[0m";
+                                    else status3="\u001B[31mFail\u001B[0m";
+
+                                    System.out.println("+--------------------------------------------+");
+                                    System.out.printf("|%3sName  : \u001B[34m\u001B[1m%-33s\u001B[0m|\n"," ",studentName.toUpperCase());
+                                    System.out.printf("|%4sAge  : %2s Years old%21s|\n"," ",studentAge," ");
+                                    System.out.printf("|%sStatus  : %-20s%22s|\n"," ",status," ");
+                                    System.out.printf("|%2sTotal  : %-5.2f%28s|\n"," ",avg," ");
+                                    System.out.println("+--------------------------------------------+");
+                                    System.out.println("|   Subject  |   Marks   |  Status           |");
+                                    System.out.println("+--------------------------------------------+");
+                                    System.out.printf("|   SE-%03d   |  %5s    | %-27s|\n",s1,subMarks1,status1);
+                                    System.out.println("+--------------------------------------------+");
+                                    System.out.printf("|   SE-%03d   |  %5s    | %-27s|\n",s2,subMarks2,status2);
+                                    System.out.println("+--------------------------------------------+");
+                                    System.out.printf("|   SE-%03d   |  %5s    | %-27s|\n",s3,subMarks3,status3);
+                                    System.out.println("+--------------------------------------------+");
            
            
                                     }
@@ -73,52 +117,6 @@ public class Demo1{
 
                 }
             }
-        System.out.println(studentName+" "+studentAge+" "+subName1+" "+subName2+" "+subName3+" "+subMarks1+" "+subMarks2+" "+subMarks3);
-        avg=(subMarks1+subMarks2+subMarks3)/3;
-        int s1=Integer.parseInt(subName1.substring(3));
-        int s2=Integer.parseInt(subName2.substring(3));
-        int s3=Integer.parseInt(subName3.substring(3));
-
-
-        String status;
-        if(avg>=75) status="\u001B[34mDistinguished Pass\u001B[0m";
-        else if(avg<75&&avg>=65) status="\u001B[32mCredit Pass\u001B[0m";
-        else if(avg<65&&avg>=55) status="\u001B[33mPass\u001B[0m";
-        else status="\u001B[31mFail\u001B[0m";
-
-        String status1;
-        if(subMarks1>=75) status1="\u001B[34mDistinguished Pass\u001B[0m";
-        else if(subMarks1<75&&subMarks1>=65) status1="\u001B[32mCredit Pass\u001B[0m";
-        else if(subMarks1<65&&subMarks1>=55) status1="\u001B[33mPass\u001B[0m";
-        else status1="\u001B[31mFail\u001B[0m";
-
-        String status2;
-        if(subMarks2>=75) status2="\u001B[34mDistinguished Pass\u001B[0m";
-        else if(subMarks2<75&&subMarks2>=65) status2="\u001B[32mCredit Pass\u001B[0m";
-        else if(subMarks2<65&&subMarks2>=55) status2="\u001B[33mPass\u001B[0m";
-        else status2="\u001B[31mFail\u001B[0m";
-
-        String status3;
-        if(subMarks3>=75) status3="\u001B[34mDistinguished Pass\u001B[0m";
-        else if(subMarks3<75&&subMarks3>=65) status3="\u001B[32mCredit Pass\u001B[0m";
-        else if(subMarks3<65&&subMarks3>=55) status3="\u001B[33mPass\u001B[0m";
-        else status3="\u001B[31mFail\u001B[0m";
-
-        System.out.println("+--------------------------------------------+");
-        System.out.printf("|%3sName  : \u001B[34m\u001B[1m%-33s\u001B[0m|\n"," ",studentName.toUpperCase());
-        System.out.printf("|%4sAge  : %2s Years old%21s|\n"," ",studentAge," ");
-        System.out.printf("|%sStatus  : %-19s%22s|\n"," ",status," ");
-        System.out.printf("|%2sTotal  : %-5.2f%28s|\n"," ",avg," ");
-        System.out.println("+--------------------------------------------+");
-        System.out.println("|   Subject  |   Marks   |  Status           |");
-        System.out.println("+--------------------------------------------+");
-        System.out.printf("|   SE-%03d   |  %5s    | %-27s|\n",s1,subMarks1,status1);
-        System.out.println("+--------------------------------------------+");
-        System.out.printf("|   SE-%03d   |  %5s    | %-27s|\n",s2,subMarks2,status2);
-        System.out.println("+--------------------------------------------+");
-        System.out.printf("|   SE-%03d   |  %5s    | %-27s|\n",s3,subMarks3,status3);
-        System.out.println("+--------------------------------------------+");
-
-
+        
         }   
     }
